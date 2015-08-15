@@ -1,0 +1,27 @@
+{
+  "name": "JKAutolayoutReadyScrollView",
+  "version": "0.0.1",
+  "summary": "A readymade scrollview equipped with Autolayout settings.",
+  "homepage": "https://github.com/jayesh15111988/JKAutolayoutReadyScrollView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jayesh Kawli": "j.kawli@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/jayesh15111988/JKAutolayoutReadyScrollView.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "JKAutolayoutReadyScrollView/Classes/*.{h,m}",
+  "requires_arc": true,
+  "dependencies": {
+    "TPKeyboardAvoiding": [
+      "~> 1.2"
+    ]
+  }
+}

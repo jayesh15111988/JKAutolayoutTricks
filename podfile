@@ -1,0 +1,3 @@
+pod 'BlocksKit'
+pod 'EDColor'
+pod 'JKAutolayoutReadyScrollView', :git => 'git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git' , :branch => 'master'

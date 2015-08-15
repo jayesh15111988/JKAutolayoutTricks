@@ -1,0 +1,27 @@
+PODS:
+  - EDColor (1.0.0)
+  - JKAutolayoutReadyScrollView (0.0.1):
+    - TPKeyboardAvoiding (~> 1.2)
+  - TPKeyboardAvoiding (1.2.9)
+
+DEPENDENCIES:
+  - EDColor
+  - JKAutolayoutReadyScrollView (from `git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git`,
+    branch `master`)
+
+EXTERNAL SOURCES:
+  JKAutolayoutReadyScrollView:
+    :branch: master
+    :git: git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git
+
+CHECKOUT OPTIONS:
+  JKAutolayoutReadyScrollView:
+    :commit: 990b2d6e03711889bc51ba6ca698e28b2e8b688f
+    :git: git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git
+
+SPEC CHECKSUMS:
+  EDColor: c83f9a61f9f9b3c23d541f1feb561558e29cb088
+  JKAutolayoutReadyScrollView: 904d57c81dab54bf0bc1c12453e2d61ff7c5279b
+  TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
+
+COCOAPODS: 0.38.2
