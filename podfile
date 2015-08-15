@@ -1,3 +1,4 @@
 pod 'BlocksKit'
 pod 'EDColor'
+pod 'ReactiveCocoa', '~> 2.5'
 pod 'JKAutolayoutReadyScrollView', :git => 'git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git' , :branch => 'master'

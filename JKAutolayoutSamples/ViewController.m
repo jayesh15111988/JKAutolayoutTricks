@@ -10,6 +10,7 @@
 #import <JKAutolayoutReadyScrollView/ScrollViewAutolayoutCreator.h>
 #import "ViewController.h"
 #import "NSObject+NameTags.h"
+#import <BlocksKit/UIView+BlocksKit.h>
 
 #pragma mark - Cross Platform
 #if TARGET_OS_IPHONE
@@ -40,6 +41,9 @@
     [autolayoutContentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-44-[lab(>=10)]" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(lab)]];
     
     UIButton* button = [UIButton new];
+    [button bk_whenTapped:^{
+        
+    }];
     [button setBackgroundColor:[UIColor darkGrayColor]];
     button.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
     [button setTitle:@"this is pretty big button Bro!" forState:UIControlStateNormal];
@@ -149,13 +153,15 @@
     [autolayoutContentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[superView1]-20-[horizontalCenterView(100)]" options:NSLayoutFormatAlignAllCenterX metrics:nil views:NSDictionaryOfVariableBindings(superView1, horizontalCenterView)]];
 //    NSLayoutConstraint* verticalOffsetConstraint = [NSLayoutConstraint constraintWithItem:horizontalCenterView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:superView1 attribute:NSLayoutAttributeBottom multiplier:1.0 constant:40];
 //    [autolayoutContentView addConstraint:verticalOffsetConstraint];
-//    [autolayoutContentView addConstraint:[NSLayoutConstraint constraintWithItem:horizontalCenterView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100]];    
+//    [autolayoutContentView addConstraint:[NSLayoutConstraint constraintWithItem:horizontalCenterView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100]];
     
     UIView* sampleObject = [UIView new];
     [sampleObject setNametag:@"Steve"];
     NSLog(@"%@", sampleObject.nametag);
     NSLog(@"Identifier %@", sampleObject.objectIdentifier);
-    
+    [horizontalCenterView bk_whenTapped:^{
+        
+    }];
     [alCreator addBottomSpaceConstraintToLastView:horizontalCenterView withBottomPadding:20.0f];
 
 }

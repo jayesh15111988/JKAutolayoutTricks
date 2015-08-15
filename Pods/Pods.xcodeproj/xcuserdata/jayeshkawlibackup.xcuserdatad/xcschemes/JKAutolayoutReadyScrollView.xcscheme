@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A085A91A6E5862B1E430E06B"
+               BlueprintIdentifier = "8509448065B170BD0402D462"
                BuildableName = "libJKAutolayoutReadyScrollView.a"
                BlueprintName = "JKAutolayoutReadyScrollView"
                ReferencedContainer = "container:Pods.xcodeproj">
