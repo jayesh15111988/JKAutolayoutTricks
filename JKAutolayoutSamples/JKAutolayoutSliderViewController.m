@@ -21,8 +21,10 @@
     [super viewDidLoad];
     ScrollViewAutolayoutCreator* autoLayoutScrollView = [[ScrollViewAutolayoutCreator alloc] initWithSuperView:self.view];
     NSArray* headerViews = @[@"first_header", @"second_header"];
-    NSDictionary* subHeaderViews = @{@"first_header": @[@"1", @"2"], @"second_header": @[@"2", @"4"]};
-    NSDictionary* metrics = @{@"padding": @(10)};
+    NSDictionary* subHeaderViews = @{@"first_header": @[@"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2"], @"second_header": @[@"2", @"4"]};
+    CGFloat padding = 10.0;
+    NSDictionary* metrics = @{@"padding": @(padding)};
+    id topLayout = self.topLayoutGuide;
     NSInteger outerIndexTracker = 0, innerIndexTracker;
     UIView* previousSubHeadersCollectionView = nil;
     for (NSString* header in headerViews) {
@@ -39,7 +41,7 @@
         
         [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[headerLabelView]-padding-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(headerLabelView)]];
         if (outerIndexTracker == 0) {
-            [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-44-[headerLabelView]" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(headerLabelView)]];
+            [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[headerLabelView]" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(topLayout, headerLabelView)]];
         } else {
             [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousSubHeadersCollectionView]-padding-[headerLabelView]" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(previousSubHeadersCollectionView, headerLabelView)]];
         }
@@ -51,24 +53,31 @@
         UIView* subHeaderView = [UIView new];
         [autoLayoutScrollView.contentView addSubview:subHeaderView];
         [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[subHeaderView]-padding-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(subHeaderView)]];
-        [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerLabelView]-padding-[subHeaderView(innerSubviewsHolderHeight)]" options:kNilOptions metrics:@{@"innerSubviewsHolderHeight": @(subHeadersCollection.count * 30), @"padding": @(10)} views:NSDictionaryOfVariableBindings(headerLabelView, subHeaderView)]];
+        [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerLabelView]-padding-[subHeaderView(>=0)]" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(headerLabelView, subHeaderView)]];
         
         UIView* innerLabelViewRef = nil;
         
         for (NSString* subHeader in subHeadersCollection) {
             UIView* innerLabelView = [UIView new];
+            [innerLabelView setBackgroundColor:[UIColor yellowColor]];
             [innerLabelView bk_whenTapped:^{
                 NSLog(@"Section %ld and Row %ld pressed", outerIndexTracker, innerIndexTracker);
             }];
             UILabel* innerLabel = [UILabel new];
             innerLabel.text = subHeader;
+            innerLabel.numberOfLines = 0;
             [subHeaderView addSubview:innerLabelView];
+            [subHeaderView setBackgroundColor:[UIColor blueColor]];
             [innerLabelView addSubview:innerLabel];
             [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[innerLabelView]-padding-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(innerLabelView)]];
             if (innerIndexTracker == 0) {
                 [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[innerLabelView]" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(innerLabelView)]];
             } else {
-                [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[innerLabelViewRef]-[innerLabelView]" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(innerLabelViewRef, innerLabelView)]];
+                if (innerIndexTracker == subHeadersCollection.count - 1) {
+                    [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[innerLabelViewRef]-[innerLabelView]-10-|" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(innerLabelViewRef, innerLabelView)]];
+                } else {
+                    [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[innerLabelViewRef]-[innerLabelView]" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(innerLabelViewRef, innerLabelView)]];
+                }
             }
             
             [innerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[innerLabel]-|" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(innerLabel)]];
@@ -78,7 +87,7 @@
             innerIndexTracker++;
         }
         previousSubHeadersCollectionView = subHeaderView;
-        if (header == [headerViews lastObject]) {
+        if (outerIndexTracker == headerViews.count - 1) {
             [autoLayoutScrollView addBottomSpaceConstraintToLastView:subHeaderView withBottomPadding:20.0f];
         }
         outerIndexTracker++;
