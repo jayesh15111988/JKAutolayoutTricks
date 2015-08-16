@@ -69,11 +69,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JKAutolayoutSamples/JKAutolayoutSliderViewController.m"
-            timestampString = "461380805.329557"
+            timestampString = "461382316.308555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -85,11 +85,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JKAutolayoutSamples/JKAutolayoutSliderViewController.m"
-            timestampString = "461380805.329557"
+            timestampString = "461382316.308555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -101,11 +101,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JKAutolayoutSamples/JKAutolayoutSliderViewController.m"
-            timestampString = "461380853.828412"
+            timestampString = "461382316.308555"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
