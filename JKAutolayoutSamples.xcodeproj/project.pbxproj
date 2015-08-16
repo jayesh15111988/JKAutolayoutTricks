@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3801C2661B80320A00E38387 /* caret_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 3801C2641B80320A00E38387 /* caret_up.png */; };
 		3837C1851B7EDA1200B59BF1 /* UIView+autolayoutEnabled.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C1841B7EDA1200B59BF1 /* UIView+autolayoutEnabled.m */; };
 		3837C1881B7EF89200B59BF1 /* AutoResizingCenterViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C1871B7EF89200B59BF1 /* AutoResizingCenterViewViewController.m */; };
 		3837C18C1B7F9FF800B59BF1 /* NSObject+NameTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C18B1B7F9FF800B59BF1 /* NSObject+NameTags.m */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3801C2641B80320A00E38387 /* caret_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caret_up.png; sourceTree = "<group>"; };
 		3837C1831B7EDA1200B59BF1 /* UIView+autolayoutEnabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+autolayoutEnabled.h"; sourceTree = "<group>"; };
 		3837C1841B7EDA1200B59BF1 /* UIView+autolayoutEnabled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+autolayoutEnabled.m"; sourceTree = "<group>"; };
 		3837C1861B7EF89200B59BF1 /* AutoResizingCenterViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoResizingCenterViewViewController.h; sourceTree = "<group>"; };
@@ -86,6 +88,13 @@
 				3B33D7D844755A64FABD5513 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3801C2621B80320300E38387 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		3837C1821B7EDA0200B59BF1 /* AutolayoutEnable Category */ = {
@@ -147,6 +156,8 @@
 		38EB57481B7C2CBA00008208 /* JKAutolayoutSamples */ = {
 			isa = PBXGroup;
 			children = (
+				3801C2621B80320300E38387 /* Images */,
+				3801C2641B80320A00E38387 /* caret_up.png */,
 				38DAEF0D1B802C56008A850F /* Custom View */,
 				3837C18D1B7FB0B300B59BF1 /* View Slider */,
 				3837C1891B7F9FC700B59BF1 /* Name Tag Category */,
@@ -284,6 +295,7 @@
 			files = (
 				38EB57551B7C2CBA00008208 /* Main.storyboard in Resources */,
 				38EB575A1B7C2CBA00008208 /* LaunchScreen.xib in Resources */,
+				3801C2661B80320A00E38387 /* caret_up.png in Resources */,
 				38EB57571B7C2CBA00008208 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

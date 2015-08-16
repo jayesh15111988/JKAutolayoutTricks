@@ -80,6 +80,22 @@
 							   metrics:nil
 							     views:NSDictionaryOfVariableBindings (headerLabel)]];
 
+		UIImageView *caretImageView = [UIImageView new];
+		caretImageView.image = [UIImage imageNamed:@"caret_up"];
+		[headerLabelView addSubview:caretImageView];
+		[headerLabelView
+		    addConstraints:[NSLayoutConstraint
+				       constraintsWithVisualFormat:@"H:[caretImageView(44)]|"
+							   options:NSLayoutFormatAlignAllCenterY
+							   metrics:nil
+							     views:NSDictionaryOfVariableBindings (caretImageView)]];
+		[headerLabelView
+		    addConstraints:[NSLayoutConstraint
+				       constraintsWithVisualFormat:@"V:|-(>=0)-[caretImageView(44)]-(>=0)-|"
+							   options:kNilOptions
+							   metrics:nil
+							     views:NSDictionaryOfVariableBindings (caretImageView)]];
+
 		NSArray *subHeadersCollection = subHeaderViews[header];
 		AutolayoutedExpandableView *subHeaderView = [AutolayoutedExpandableView new];
 		[autoLayoutScrollView.contentView addSubview:subHeaderView];
@@ -212,7 +228,6 @@
 		}
 
 		__block NSLayoutConstraint *con;
-
 		[headerLabelView bk_whenTapped:^{
 		  if (!subHeaderView.isExpanded) {
 			  if (!con) {
@@ -235,6 +250,8 @@
 		  subHeaderView.isExpanded = !subHeaderView.isExpanded;
 		  [UIView animateWithDuration:0.25
 				   animations:^{
+				     caretImageView.transform =
+					 CGAffineTransformRotate (caretImageView.transform, M_PI);
 				     [self.view layoutIfNeeded];
 				   }];
 		}];
