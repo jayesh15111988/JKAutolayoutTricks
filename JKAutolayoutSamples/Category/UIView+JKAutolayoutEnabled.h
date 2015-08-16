@@ -1,5 +1,5 @@
 //
-//  UIView+autolayoutEnabled.h
+//  UIView+JKAutolayoutEnabled.h
 //  Sample
 //
 //  Created by Jayesh Kawli Backup on 8/14/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (autolayoutEnabled)
+@interface UIView (JKAutolayoutEnabled)
 
 @end

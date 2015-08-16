@@ -17,13 +17,6 @@ PODS:
   - EDColor (1.0.0)
   - JKAutolayoutReadyScrollView (0.0.1):
     - TPKeyboardAvoiding (~> 1.2)
-  - ReactiveCocoa (2.5):
-    - ReactiveCocoa/UI (= 2.5)
-  - ReactiveCocoa/Core (2.5):
-    - ReactiveCocoa/no-arc
-  - ReactiveCocoa/no-arc (2.5)
-  - ReactiveCocoa/UI (2.5):
-    - ReactiveCocoa/Core
   - TPKeyboardAvoiding (1.2.9)
 
 DEPENDENCIES:
@@ -31,7 +24,6 @@ DEPENDENCIES:
   - EDColor
   - JKAutolayoutReadyScrollView (from `git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git`,
     branch `master`)
-  - ReactiveCocoa (~> 2.5)
 
 EXTERNAL SOURCES:
   JKAutolayoutReadyScrollView:
@@ -47,7 +39,6 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   EDColor: c83f9a61f9f9b3c23d541f1feb561558e29cb088
   JKAutolayoutReadyScrollView: 904d57c81dab54bf0bc1c12453e2d61ff7c5279b
-  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
 
 COCOAPODS: 0.38.2

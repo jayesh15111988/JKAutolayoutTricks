@@ -1,5 +1,5 @@
 //
-//  AutolayoutedExpandableView.h
+//  JKAutolayoutedExpandableView.h
 //  JKAutolayoutSamples
 //
 //  Created by Jayesh Kawli Backup on 8/15/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AutolayoutedExpandableView : UIView
+@interface JKAutolayoutedExpandableView : UIView
 
 @property (assign, nonatomic) BOOL isExpanded;
 @property (assign, nonatomic) CGFloat originalViewHeight;

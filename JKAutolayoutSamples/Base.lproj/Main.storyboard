@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vme-wc-m3V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vme-wc-m3V">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -33,8 +33,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlB-h3-dXG">
-                                <rect key="frame" x="60" y="30" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlB-h3-dXG">
+                                <rect key="frame" x="60" y="74" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.62907774729999999" green="0.84900062610000004" blue="0.37501052559999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="S2T-K9-QdY"/>
@@ -49,8 +49,8 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Yk0-Tk-kqi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otR-9S-5Fq">
-                                <rect key="frame" x="60" y="170" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otR-9S-5Fq">
+                                <rect key="frame" x="60" y="214" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.62907774729999999" green="0.84900062610000004" blue="0.37501052559999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Show Stretch/Expand Demo">
@@ -61,8 +61,8 @@
                                     <segue destination="Ign-lN-xt7" kind="show" id="Shv-Te-NXu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-pp-Q0a">
-                                <rect key="frame" x="60" y="100" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-pp-Q0a">
+                                <rect key="frame" x="60" y="144" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.62907774729999999" green="0.84900062610000004" blue="0.37501052559999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Show center symmetric view">
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="152" y="-635"/>
         </scene>
-        <!--View Controller-->
+        <!--All Autolayout Demos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JKAllAutolayoutDemos" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -118,7 +118,7 @@
         <!--Auto Resizing Center View View Controller-->
         <scene sceneID="Vyv-aV-pEh">
             <objects>
-                <viewController id="Wo9-3a-PgK" customClass="AutoResizingCenterViewViewController" sceneMemberID="viewController">
+                <viewController id="Wo9-3a-PgK" customClass="JKAutoResizingCenterViewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HOi-J9-n6M"/>
                         <viewControllerLayoutGuide type="bottom" id="3dn-ls-zES"/>

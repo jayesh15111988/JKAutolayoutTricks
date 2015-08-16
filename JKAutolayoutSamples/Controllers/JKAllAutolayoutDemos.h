@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JKAllAutolayoutDemos.h
 //  JKAutolayoutSamples
 //
 //  Created by Jayesh Kawli Backup on 8/12/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface JKAllAutolayoutDemos : UIViewController
 
 @end
-

@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (NameTags)
+@interface NSObject (JKNameTags)
 
 - (id)nametag;
-- (void)setNametag:(NSString*)theNametag;
-- (NSString*)objectIdentifier;
+- (void)setNametag:(NSString *)theNametag;
+- (NSString *)objectIdentifier;
 
 @end

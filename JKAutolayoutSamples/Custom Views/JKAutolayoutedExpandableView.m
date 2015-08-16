@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Jayesh Kawli Backup. All rights reserved.
 //
 
-#import "AutolayoutedExpandableView.h"
+#import "JKAutolayoutedExpandableView.h"
 
-@implementation AutolayoutedExpandableView
+@implementation JKAutolayoutedExpandableView
 
 @end

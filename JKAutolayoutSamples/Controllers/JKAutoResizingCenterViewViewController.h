@@ -1,5 +1,5 @@
 //
-//  AutoResizingCenterViewViewController.h
+//  JKAutoResizingCenterViewViewController.h
 //  JKAutolayoutSamples
 //
 //  Created by Jayesh Kawli Backup on 8/15/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AutoResizingCenterViewViewController : UIViewController
+@interface JKAutoResizingCenterViewViewController : UIViewController
 
 @end

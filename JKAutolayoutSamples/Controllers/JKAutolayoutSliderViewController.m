@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Jayesh Kawli Backup. All rights reserved.
 //
 
-#import "JKAutolayoutSliderViewController.h"
-#import "AutolayoutedExpandableView.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <JKAutolayoutReadyScrollView/ScrollViewAutolayoutCreator.h>
+#import "JKAutolayoutedExpandableView.h"
+
+#import "JKAutolayoutSliderViewController.h"
 
 @interface JKAutolayoutSliderViewController ()
 
@@ -18,9 +18,9 @@
 
 @implementation JKAutolayoutSliderViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
 	[super viewDidLoad];
+    self.title = @"Expandable View";
 	ScrollViewAutolayoutCreator *autoLayoutScrollView =
 	    [[ScrollViewAutolayoutCreator alloc] initWithSuperView:self.view];
 	NSArray *headerViews = @[ @"first_header", @"second_header" ];
@@ -97,7 +97,7 @@
 							     views:NSDictionaryOfVariableBindings (caretImageView)]];
 
 		NSArray *subHeadersCollection = subHeaderViews[header];
-		AutolayoutedExpandableView *subHeaderView = [AutolayoutedExpandableView new];
+		JKAutolayoutedExpandableView *subHeaderView = [JKAutolayoutedExpandableView new];
 		[autoLayoutScrollView.contentView addSubview:subHeaderView];
 		[autoLayoutScrollView.contentView
 		    addConstraints:[NSLayoutConstraint
@@ -227,7 +227,7 @@
 			innerIndexTracker++;
 		}
 
-		__block NSLayoutConstraint* con;
+		__block NSLayoutConstraint *con;
 		[headerLabelView bk_whenTapped:^{
 		  if (!subHeaderView.isExpanded) {
 			  if (!con) {
