@@ -7,6 +7,7 @@
 //
 
 #import "JKAutolayoutSliderViewController.h"
+#import "AutolayoutedExpandableView.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <BlocksKit/BlocksKit+UIKit.h>
 #import <JKAutolayoutReadyScrollView/ScrollViewAutolayoutCreator.h>
@@ -47,7 +48,7 @@
         [headerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[headerLabel]-|" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(headerLabel)]];
         
         NSArray* subHeadersCollection = subHeaderViews[header];
-        UIView* subHeaderView = [UIView new];
+        AutolayoutedExpandableView* subHeaderView = [AutolayoutedExpandableView new];
         [autoLayoutScrollView.contentView addSubview:subHeaderView];
         [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[subHeaderView]-padding-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(subHeaderView)]];
         [autoLayoutScrollView.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[headerLabelView]-padding-[subHeaderView(>=0)]" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(headerLabelView, subHeaderView)]];
@@ -61,6 +62,7 @@
             [innerLabelView setBackgroundColor:[UIColor yellowColor]];
             [innerLabelView bk_whenTapped:^{
                 NSLog(@"Section %ld and Row %ld pressed", outerIndexTracker, innerIndexTracker);
+//                [innerLabelView addConstraint:[NSLayoutConstraint constraintWithItem:innerLabelView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0]];
             }];
             
             UIView* bottomBorderView = [UIView new];
@@ -86,7 +88,7 @@
             }
             
             [innerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[innerLabel]-padding-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(innerLabel)]];
-            [innerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding-[innerLabel]-padding-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(innerLabel)]];
+            [innerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-padding@500-[innerLabel]-padding@500-|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(innerLabel)]];
             
             [innerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[bottomBorderView]|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(bottomBorderView)]];
             [innerLabelView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bottomBorderView(1)]|" options:kNilOptions metrics:metrics views:NSDictionaryOfVariableBindings(bottomBorderView)]];
@@ -104,11 +106,40 @@
             innerIndexTracker++;
         }
         
+        __block NSLayoutConstraint* con;
+        
         [headerLabelView bk_whenTapped:^{
-            NSLog(@"Section %ld Pressed and SubheaderView frame is %@", (long)outerIndexTracker,subHeaderView);
-            NSLog(@"%f height", subHeaderView.frame.size.height);
-//            NSLayoutConstraint* heightConstraintForSubHeaderView = [NSLayoutConstraint constraintWithItem:subHeaderView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0.0];
-//            [subHeaderView addConstraint:heightConstraintForSubHeaderView];
+            //NSLog(@"Section %ld Pressed and SubheaderView frame is %@", (long)outerIndexTracker,subHeaderView);
+            //NSLog(@"%f height", subHeaderView.frame.size.height);
+            
+            if (!subHeaderView.isExpanded) {
+                if (!con) {
+                    subHeaderView.originalViewHeight = subHeaderView.frame.size.height;
+                    con = [NSLayoutConstraint constraintWithItem:subHeaderView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0];
+                    [subHeaderView addConstraint:con];
+                } else {
+                    con.constant = 0;
+                }
+            } else {
+                con.constant = subHeaderView.originalViewHeight;
+            }
+            
+            subHeaderView.isExpanded = !subHeaderView.isExpanded;
+            [UIView animateWithDuration:0.25 animations:^{
+                [self.view layoutIfNeeded];
+            }];
+            
+            for (UIView* subV in subHeaderView.subviews) {
+                //NSLog(@"%@\n\n", subV);
+                //[subV addConstraint:[NSLayoutConstraint constraintWithItem:subV attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0]];
+                for (NSLayoutConstraint* con in subV.constraints) {
+                    //NSLog(@"%ld -- %ld -- %f\n\n", (long)con.firstAttribute, (long)con.secondAttribute, con.constant);
+                    if (con.firstAttribute == NSLayoutAttributeHeight && !con.secondAttribute) {
+                        //con.constant = 0;
+                        //NSLog(@"%ld -- %ld -- %f\n\n", (long)con.firstAttribute, (long)con.secondAttribute, con.constant);
+                    }
+                }
+            }
         }];
         
         previousSubHeadersCollectionView = subHeaderView;

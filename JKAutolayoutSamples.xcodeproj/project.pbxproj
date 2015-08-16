@@ -11,6 +11,7 @@
 		3837C1881B7EF89200B59BF1 /* AutoResizingCenterViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C1871B7EF89200B59BF1 /* AutoResizingCenterViewViewController.m */; };
 		3837C18C1B7F9FF800B59BF1 /* NSObject+NameTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C18B1B7F9FF800B59BF1 /* NSObject+NameTags.m */; };
 		3837C1901B7FB29100B59BF1 /* JKAutolayoutSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C18F1B7FB29100B59BF1 /* JKAutolayoutSliderViewController.m */; };
+		38DAEF101B802C6D008A850F /* AutolayoutedExpandableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DAEF0F1B802C6D008A850F /* AutolayoutedExpandableView.m */; };
 		38EB574C1B7C2CBA00008208 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB574B1B7C2CBA00008208 /* main.m */; };
 		38EB574F1B7C2CBA00008208 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB574E1B7C2CBA00008208 /* AppDelegate.m */; };
 		38EB57521B7C2CBA00008208 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB57511B7C2CBA00008208 /* ViewController.m */; };
@@ -40,6 +41,8 @@
 		3837C18B1B7F9FF800B59BF1 /* NSObject+NameTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NameTags.m"; sourceTree = "<group>"; };
 		3837C18E1B7FB29100B59BF1 /* JKAutolayoutSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKAutolayoutSliderViewController.h; sourceTree = "<group>"; };
 		3837C18F1B7FB29100B59BF1 /* JKAutolayoutSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKAutolayoutSliderViewController.m; sourceTree = "<group>"; };
+		38DAEF0E1B802C6D008A850F /* AutolayoutedExpandableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutolayoutedExpandableView.h; sourceTree = "<group>"; };
+		38DAEF0F1B802C6D008A850F /* AutolayoutedExpandableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutolayoutedExpandableView.m; sourceTree = "<group>"; };
 		38EB57461B7C2CBA00008208 /* JKAutolayoutSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAutolayoutSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EB574A1B7C2CBA00008208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38EB574B1B7C2CBA00008208 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,6 +115,15 @@
 			name = "View Slider";
 			sourceTree = "<group>";
 		};
+		38DAEF0D1B802C56008A850F /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				38DAEF0E1B802C6D008A850F /* AutolayoutedExpandableView.h */,
+				38DAEF0F1B802C6D008A850F /* AutolayoutedExpandableView.m */,
+			);
+			name = "Custom View";
+			sourceTree = "<group>";
+		};
 		38EB573D1B7C2CBA00008208 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +147,7 @@
 		38EB57481B7C2CBA00008208 /* JKAutolayoutSamples */ = {
 			isa = PBXGroup;
 			children = (
+				38DAEF0D1B802C56008A850F /* Custom View */,
 				3837C18D1B7FB0B300B59BF1 /* View Slider */,
 				3837C1891B7F9FC700B59BF1 /* Name Tag Category */,
 				3837C1821B7EDA0200B59BF1 /* AutolayoutEnable Category */,
@@ -328,6 +341,7 @@
 				3837C1901B7FB29100B59BF1 /* JKAutolayoutSliderViewController.m in Sources */,
 				3837C18C1B7F9FF800B59BF1 /* NSObject+NameTags.m in Sources */,
 				3837C1851B7EDA1200B59BF1 /* UIView+autolayoutEnabled.m in Sources */,
+				38DAEF101B802C6D008A850F /* AutolayoutedExpandableView.m in Sources */,
 				3837C1881B7EF89200B59BF1 /* AutoResizingCenterViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
