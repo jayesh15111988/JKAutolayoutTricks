@@ -227,7 +227,7 @@
 			innerIndexTracker++;
 		}
 
-		__block NSLayoutConstraint *con;
+		__block NSLayoutConstraint* con;
 		[headerLabelView bk_whenTapped:^{
 		  if (!subHeaderView.isExpanded) {
 			  if (!con) {

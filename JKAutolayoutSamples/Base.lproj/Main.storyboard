@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ign-lN-xt7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vme-wc-m3V">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="U7O-I8-RsD">
+            <objects>
+                <navigationController id="vme-wc-m3V" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bFu-YI-0jc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="shv-a0-SJV" kind="relationship" relationship="rootViewController" id="wyG-j5-aDx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTz-Uq-doP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="-1204"/>
+        </scene>
+        <!--Autolayout Demos-->
+        <scene sceneID="FX4-Jt-n5a">
+            <objects>
+                <viewController id="shv-a0-SJV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccA-af-RzD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Atf-Vz-de5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HdT-5F-vxY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlB-h3-dXG">
+                                <rect key="frame" x="60" y="30" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.62907774729999999" green="0.84900062610000004" blue="0.37501052559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="S2T-K9-QdY"/>
+                                    <constraint firstAttribute="height" constant="30" id="tXW-6e-uRI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Show Autolayout Demos">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Yk0-Tk-kqi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otR-9S-5Fq">
+                                <rect key="frame" x="60" y="170" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.62907774729999999" green="0.84900062610000004" blue="0.37501052559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Show Stretch/Expand Demo">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ign-lN-xt7" kind="show" id="Shv-Te-NXu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-pp-Q0a">
+                                <rect key="frame" x="60" y="100" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.62907774729999999" green="0.84900062610000004" blue="0.37501052559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Show center symmetric view">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Wo9-3a-PgK" kind="show" id="qOV-vb-1ZZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="leading" secondItem="GlB-h3-dXG" secondAttribute="leading" id="29A-fH-omw"/>
+                            <constraint firstItem="GlB-h3-dXG" firstAttribute="top" secondItem="ccA-af-RzD" secondAttribute="bottom" constant="10" id="31g-jf-UUj"/>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="top" secondItem="wyj-pp-Q0a" secondAttribute="bottom" constant="40" id="Njr-IH-fxE"/>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="height" secondItem="wyj-pp-Q0a" secondAttribute="height" id="WUP-K0-DJL"/>
+                            <constraint firstAttribute="centerX" secondItem="GlB-h3-dXG" secondAttribute="centerX" id="bGV-Tw-eKz"/>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="trailing" secondItem="GlB-h3-dXG" secondAttribute="trailing" id="dRG-qu-9a9"/>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="trailing" secondItem="wyj-pp-Q0a" secondAttribute="trailing" id="gR2-2p-J9g"/>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="leading" secondItem="wyj-pp-Q0a" secondAttribute="leading" id="pk8-Yq-MTp"/>
+                            <constraint firstItem="otR-9S-5Fq" firstAttribute="height" secondItem="GlB-h3-dXG" secondAttribute="height" id="s6i-vk-jRE"/>
+                            <constraint firstItem="wyj-pp-Q0a" firstAttribute="top" secondItem="GlB-h3-dXG" secondAttribute="bottom" constant="40" id="yt9-s3-R7w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Autolayout Demos" id="sAP-mv-aeb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TI8-52-rhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="-635"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
