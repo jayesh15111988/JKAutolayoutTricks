@@ -105,7 +105,7 @@
 	UIView *v2 = [UIView new];
 	NSDictionary *views = NSDictionaryOfVariableBindings (v1, v2, centerFiddling);
 	[v1 setBackgroundColor:[UIColor blackColor]];
-	[v2 setBackgroundColor:[UIColor lightGrayColor]];
+	[v2 setBackgroundColor:[UIColor redColor]];
 	[autolayoutContentView addSubview:v1];
 	[autolayoutContentView addSubview:v2];
 	[autolayoutContentView
@@ -205,6 +205,7 @@
 								   options:NSLayoutFormatAlignAllTop
 								   metrics:nil
 								     views:views2]];
+    
 	//[autolayoutContentView addConstraints:[NSLayoutConstraint
 	// constraintsWithVisualFormat:@"H:|-10-[v6(<=20)]-10-[v7(v6)]-10-[v8]-10-[v9(v6)]-[v10(v7)]-10-|"
 	// options:NSLayoutFormatAlignAllTop metrics:nil views:views2]];
@@ -215,18 +216,18 @@
 	UIView *superView4 = [UIView new];
 
 	NSDictionary *views3 = NSDictionaryOfVariableBindings (superView1, superView2, superView3, superView4, v10);
-	NSDictionary *metrics = @{ @"padding" : @(10) };
+	NSDictionary *metrics = @{ @"padding" : @(10), @"custompPadding": @(20)};
 	[autolayoutContentView addSubview:superView1];
 	[superView1 addSubview:superView2];
 	[superView2 addSubview:superView3];
 	[superView3 addSubview:superView4];
 	superView1.backgroundColor = [UIColor lightGrayColor];
-	superView2.backgroundColor = [UIColor yellowColor];
-	superView3.backgroundColor = [UIColor greenColor];
+	superView2.backgroundColor = [UIColor blackColor];
+	superView3.backgroundColor = [UIColor blueColor];
 	superView4.backgroundColor = [UIColor blueColor];
 
 	[autolayoutContentView
-	    addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[v10]-padding-[superView1(100)]"
+	    addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[v10]-padding-[superView1(150)]"
 								   options:kNilOptions
 								   metrics:metrics
 								     views:views3]];
@@ -239,8 +240,8 @@
 	NSArray *viewsCollection = @[ @"superView2", @"superView3", @"superView4" ];
 
 	for (NSString *v in viewsCollection) {
-		NSString *hVisualConstraintLayoutString = [NSString stringWithFormat:@"H:|-padding-[%@]-padding-|", v];
-		NSString *vVisualConstraintLayoutString = [NSString stringWithFormat:@"V:|-padding-[%@]-padding-|", v];
+		NSString *hVisualConstraintLayoutString = [NSString stringWithFormat:@"H:|-custompPadding-[%@]-custompPadding-|", v];
+		NSString *vVisualConstraintLayoutString = [NSString stringWithFormat:@"V:|-custompPadding-[%@]-custompPadding-|", v];
 		[autolayoutContentView
 		    addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:hVisualConstraintLayoutString
 									   options:kNilOptions
