@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
     self.title = @"Expandable View";
+    self.automaticallyAdjustsScrollViewInsets = NO;
 	ScrollViewAutolayoutCreator *autoLayoutScrollView =
 	    [[ScrollViewAutolayoutCreator alloc] initWithSuperView:self.view];
 	NSArray *headerViews = @[ @"first_header", @"second_header" ];
@@ -61,7 +62,7 @@
 			[autoLayoutScrollView.contentView
 			    addConstraints:[NSLayoutConstraint
 					       constraintsWithVisualFormat:@"V:[" @"previousSubHeadersCollectionVi"
-					       @"ew]-padding-[headerLabelView]"
+					       @"ew]-padding@999-[headerLabelView]"
 								   options:kNilOptions
 								   metrics:metrics
 								     views:NSDictionaryOfVariableBindings (
@@ -109,7 +110,7 @@
 							     views:NSDictionaryOfVariableBindings (subHeaderView)]];
 		[autoLayoutScrollView.contentView
 		    addConstraints:[NSLayoutConstraint
-				       constraintsWithVisualFormat:@"V:[headerLabelView]-padding-[subHeaderView(>=0)]"
+				       constraintsWithVisualFormat:@"V:[headerLabelView]-padding@999-[subHeaderView(>=0)]"
 							   options:kNilOptions
 							   metrics:metrics
 							     views:NSDictionaryOfVariableBindings (headerLabelView,
@@ -147,7 +148,7 @@
 			if (innerIndexTracker == 0) {
 				[autoLayoutScrollView.contentView
 				    addConstraints:[NSLayoutConstraint
-						       constraintsWithVisualFormat:@"V:|-padding-[innerLabelView]"
+						       constraintsWithVisualFormat:@"V:|-padding@999-[innerLabelView]"
 									   options:kNilOptions
 									   metrics:metrics
 									     views:NSDictionaryOfVariableBindings (
@@ -186,7 +187,7 @@
 									       innerLabel)]];
 			[innerLabelView
 			    addConstraints:[NSLayoutConstraint
-					       constraintsWithVisualFormat:@"V:|-padding@500-[innerLabel]-padding@500-|"
+					       constraintsWithVisualFormat:@"V:|-padding@999-[innerLabel]-padding@500-|"
 								   options:kNilOptions
 								   metrics:metrics
 								     views:NSDictionaryOfVariableBindings (
@@ -231,6 +232,9 @@
 
 		__block NSLayoutConstraint *con;
 		[headerLabelView bk_whenTapped:^{
+            if (outerIndexTracker == [headerViews count] - 1) {
+                NSLog(@"Last Header View Pressed");
+            }
 		  if (!subHeaderView.isExpanded) {
 			  if (!con) {
 				  subHeaderView.originalViewHeight = subHeaderView.frame.size.height;
