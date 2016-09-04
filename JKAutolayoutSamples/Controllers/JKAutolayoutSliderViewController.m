@@ -26,7 +26,7 @@
     [[ScrollViewAutolayoutCreator alloc] initWithSuperView:self.view andHorizontalScrollingEnabled:NO];
     NSArray *headerViews = @[ @"first_header", @"second_header" ];
     NSDictionary *subHeaderViews = @{
-                                     @"first_header" : @[ @"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2" ],
+                                     @"first_header" : @[ @"1", @"2\nsdf\nsfsd\n", @"1\nsdfs\nsfsdf\nsfsdf\nfsdf", @"2", @"1", @"2", @"1", @"2", @"1", @"2", @"1", @"2" ],
                                      @"second_header" : @[ @"2", @"4" ]
                                      };
     
@@ -229,23 +229,24 @@
             innerLabelViewRef = innerLabelView;
             innerIndexTracker++;
         }
-        
+        subHeaderView.expanded = YES;
         __block NSLayoutConstraint *con;
         [headerLabelView bk_whenTapped:^{
-            if (!subHeaderView.isExpanded) {
-                if (!con) {
-                    subHeaderView.originalViewHeight = subHeaderView.frame.size.height;
-                    con = [NSLayoutConstraint constraintWithItem:subHeaderView
-                                                       attribute:NSLayoutAttributeHeight
-                                                       relatedBy:NSLayoutRelationEqual
-                                                          toItem:nil
-                                                       attribute:NSLayoutAttributeNotAnAttribute
-                                                      multiplier:1.0
-                                                        constant:0];
-                    [subHeaderView addConstraint:con];
-                } else {
-                    con.constant = 0;
-                }
+            
+            if (!con) {
+                con = [NSLayoutConstraint constraintWithItem:subHeaderView
+                                                   attribute:NSLayoutAttributeHeight
+                                                   relatedBy:NSLayoutRelationEqual
+                                                      toItem:nil
+                                                   attribute:NSLayoutAttributeNotAnAttribute
+                                                  multiplier:1.0
+                                                    constant:0];
+                [subHeaderView addConstraint:con];
+            }
+            
+            if (subHeaderView.isExpanded) {
+                subHeaderView.originalViewHeight = subHeaderView.frame.size.height;
+                con.constant = 0;
             } else {
                 con.constant = subHeaderView.originalViewHeight;
             }
@@ -257,6 +258,10 @@
                                  caretImageView.transform =
                                  CGAffineTransformRotate (caretImageView.transform, M_PI);
                                  [self.view layoutIfNeeded];
+                             } completion:^(BOOL finished) {
+                                 if (subHeaderView.expanded && outerIndexTracker == [headerViews count] - 1) {
+                                     [autoLayoutScrollView scrollToBottom];
+                                 }
                              }];
         }];
         
@@ -266,6 +271,7 @@
         }
         outerIndexTracker++;
     }
+    
 }
 
 @end
