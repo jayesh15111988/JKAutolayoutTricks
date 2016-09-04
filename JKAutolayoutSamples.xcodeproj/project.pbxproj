@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3801C2661B80320A00E38387 /* caret_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 3801C2641B80320A00E38387 /* caret_up.png */; };
-		380872FC1BC8A25A00007280 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380872FB1BC8A25A00007280 /* LandingViewController.m */; settings = {ASSET_TAGS = (); }; };
+		380872FC1BC8A25A00007280 /* LandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380872FB1BC8A25A00007280 /* LandingViewController.m */; };
 		3837C1851B7EDA1200B59BF1 /* UIView+JKAutolayoutEnabled.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C1841B7EDA1200B59BF1 /* UIView+JKAutolayoutEnabled.m */; };
 		3837C1881B7EF89200B59BF1 /* JKAutoResizingCenterViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C1871B7EF89200B59BF1 /* JKAutoResizingCenterViewViewController.m */; };
 		3837C18C1B7F9FF800B59BF1 /* NSObject+JKNameTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837C18B1B7F9FF800B59BF1 /* NSObject+JKNameTags.m */; };
@@ -21,7 +21,7 @@
 		38EB57571B7C2CBA00008208 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38EB57561B7C2CBA00008208 /* Images.xcassets */; };
 		38EB575A1B7C2CBA00008208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EB57581B7C2CBA00008208 /* LaunchScreen.xib */; };
 		38EB57661B7C2CBA00008208 /* JKAutolayoutSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB57651B7C2CBA00008208 /* JKAutolayoutSamplesTests.m */; };
-		AAAA5A0112AC5B35830BF52C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B33D7D844755A64FABD5513 /* libPods.a */; };
+		A56DCC2764D886E7BD4F7583 /* libPods-JKAutolayoutSamples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 710B2337D6B0317F046874E6 /* libPods-JKAutolayoutSamples.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +61,9 @@
 		38EB575F1B7C2CBA00008208 /* JKAutolayoutSamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKAutolayoutSamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EB57641B7C2CBA00008208 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38EB57651B7C2CBA00008208 /* JKAutolayoutSamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKAutolayoutSamplesTests.m; sourceTree = "<group>"; };
-		3B33D7D844755A64FABD5513 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		820C8B651F744BC7C6C2814C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F344A8784ACE5CCE2DDFDC4E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3F0B1D23CC5E742D032D9A19 /* Pods-JKAutolayoutSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAutolayoutSamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKAutolayoutSamples/Pods-JKAutolayoutSamples.debug.xcconfig"; sourceTree = "<group>"; };
+		710B2337D6B0317F046874E6 /* libPods-JKAutolayoutSamples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JKAutolayoutSamples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA70A71C2F9E6D9F3721721C /* Pods-JKAutolayoutSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAutolayoutSamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKAutolayoutSamples/Pods-JKAutolayoutSamples.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAA5A0112AC5B35830BF52C /* libPods.a in Frameworks */,
+				A56DCC2764D886E7BD4F7583 /* libPods-JKAutolayoutSamples.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +85,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		361881521C9266406227456D /* Frameworks */ = {
+		02FAC4865BAE0247CFFDA699 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3B33D7D844755A64FABD5513 /* libPods.a */,
+				710B2337D6B0317F046874E6 /* libPods-JKAutolayoutSamples.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 				38EB57481B7C2CBA00008208 /* JKAutolayoutSamples */,
 				38EB57621B7C2CBA00008208 /* JKAutolayoutSamplesTests */,
 				38EB57471B7C2CBA00008208 /* Products */,
-				C357A876AC20F4C930718641 /* Pods */,
-				361881521C9266406227456D /* Frameworks */,
+				6C13205713008834ECDE2151 /* Pods */,
+				02FAC4865BAE0247CFFDA699 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,11 +199,11 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C357A876AC20F4C930718641 /* Pods */ = {
+		6C13205713008834ECDE2151 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F344A8784ACE5CCE2DDFDC4E /* Pods.debug.xcconfig */,
-				820C8B651F744BC7C6C2814C /* Pods.release.xcconfig */,
+				3F0B1D23CC5E742D032D9A19 /* Pods-JKAutolayoutSamples.debug.xcconfig */,
+				CA70A71C2F9E6D9F3721721C /* Pods-JKAutolayoutSamples.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -215,11 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38EB57691B7C2CBA00008208 /* Build configuration list for PBXNativeTarget "JKAutolayoutSamples" */;
 			buildPhases = (
-				227EEB6E4CD970D6FEC6DFDE /* Check Pods Manifest.lock */,
+				D2353BE1ECB3FA4C04CFDFC4 /* [CP] Check Pods Manifest.lock */,
 				38EB57421B7C2CBA00008208 /* Sources */,
 				38EB57431B7C2CBA00008208 /* Frameworks */,
 				38EB57441B7C2CBA00008208 /* Resources */,
-				D268B1DD519D4C29A0DD204D /* Copy Pods Resources */,
+				0175688F45A5A8CC96D3B4B6 /* [CP] Embed Pods Frameworks */,
+				3A4A2C64A7BB0DA03705F3E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,7 +255,7 @@
 		38EB573E1B7C2CBA00008208 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jayesh Kawli Backup";
 				TargetAttributes = {
 					38EB57451B7C2CBA00008208 = {
@@ -307,34 +308,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		227EEB6E4CD970D6FEC6DFDE /* Check Pods Manifest.lock */ = {
+		0175688F45A5A8CC96D3B4B6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKAutolayoutSamples/Pods-JKAutolayoutSamples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A4A2C64A7BB0DA03705F3E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKAutolayoutSamples/Pods-JKAutolayoutSamples-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2353BE1ECB3FA4C04CFDFC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		D268B1DD519D4C29A0DD204D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -417,6 +433,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -480,24 +497,26 @@
 		};
 		38EB576A1B7C2CBA00008208 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F344A8784ACE5CCE2DDFDC4E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 3F0B1D23CC5E742D032D9A19 /* Pods-JKAutolayoutSamples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JKAutolayoutSamples/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayeshKawli.autolayoutSamples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		38EB576B1B7C2CBA00008208 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 820C8B651F744BC7C6C2814C /* Pods.release.xcconfig */;
+			baseConfigurationReference = CA70A71C2F9E6D9F3721721C /* Pods-JKAutolayoutSamples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JKAutolayoutSamples/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayeshKawli.autolayoutSamples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -516,6 +535,7 @@
 				);
 				INFOPLIST_FILE = "JKAutolayoutSamplesTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayeshKawli.autolayoutSamples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKAutolayoutSamples.app/JKAutolayoutSamples";
 			};
@@ -531,6 +551,7 @@
 				);
 				INFOPLIST_FILE = "JKAutolayoutSamplesTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jayeshKawli.autolayoutSamples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKAutolayoutSamples.app/JKAutolayoutSamples";
 			};

@@ -15,15 +15,14 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - EDColor (1.0.0)
-  - JKAutolayoutReadyScrollView (0.0.1):
+  - JKAutolayoutReadyScrollView (0.4):
     - TPKeyboardAvoiding (~> 1.2)
-  - TPKeyboardAvoiding (1.2.9)
+  - TPKeyboardAvoiding (1.3)
 
 DEPENDENCIES:
   - BlocksKit
   - EDColor
-  - JKAutolayoutReadyScrollView (from `git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git`,
-    branch `master`)
+  - JKAutolayoutReadyScrollView (from `git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git`, branch `master`)
 
 EXTERNAL SOURCES:
   JKAutolayoutReadyScrollView:
@@ -32,13 +31,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   JKAutolayoutReadyScrollView:
-    :commit: 990b2d6e03711889bc51ba6ca698e28b2e8b688f
+    :commit: 5b871646f8ba88e0897f5b22f96b3a594baf1c33
     :git: git@github.com:jayesh15111988/JKAutolayoutReadyScrollView.git
 
 SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   EDColor: c83f9a61f9f9b3c23d541f1feb561558e29cb088
-  JKAutolayoutReadyScrollView: 904d57c81dab54bf0bc1c12453e2d61ff7c5279b
-  TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
+  JKAutolayoutReadyScrollView: d46ab18a3419012f2804941fc229aea707fb1304
+  TPKeyboardAvoiding: a5138f318c06fb3e151f886e18ce4a72695d9cbe
 
-COCOAPODS: 0.38.2
+PODFILE CHECKSUM: 232a92993431421e9c3a0854e93ac5b8e4cc6c26
+
+COCOAPODS: 1.0.1

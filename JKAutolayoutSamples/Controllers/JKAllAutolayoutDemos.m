@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.title = @"Autolayout Demos";
-	ScrollViewAutolayoutCreator *alCreator = [[ScrollViewAutolayoutCreator alloc] initWithSuperView:self.view];
+	ScrollViewAutolayoutCreator *alCreator = [[ScrollViewAutolayoutCreator alloc] initWithSuperView:self.view andHorizontalScrollingEnabled:NO];
 
 	UIView *autolayoutContentView = alCreator.contentView;
 	autolayoutContentView.tag = 100;

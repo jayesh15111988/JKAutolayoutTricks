@@ -10,7 +10,7 @@
 
 @interface JKAutolayoutedExpandableView : UIView
 
-@property (assign, nonatomic) BOOL isExpanded;
+@property (assign, nonatomic, getter=isExpanded) BOOL expanded;
 @property (assign, nonatomic) CGFloat originalViewHeight;
 
 @end
