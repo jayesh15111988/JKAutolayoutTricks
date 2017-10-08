@@ -22,6 +22,7 @@
 		38EB575A1B7C2CBA00008208 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EB57581B7C2CBA00008208 /* LaunchScreen.xib */; };
 		38EB57661B7C2CBA00008208 /* JKAutolayoutSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EB57651B7C2CBA00008208 /* JKAutolayoutSamplesTests.m */; };
 		A56DCC2764D886E7BD4F7583 /* libPods-JKAutolayoutSamples.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 710B2337D6B0317F046874E6 /* libPods-JKAutolayoutSamples.a */; };
+		E37EE67E1F8ACB1100061C0D /* AutoadjustingUILabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E37EE67D1F8ACB1100061C0D /* AutoadjustingUILabelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		3F0B1D23CC5E742D032D9A19 /* Pods-JKAutolayoutSamples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAutolayoutSamples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKAutolayoutSamples/Pods-JKAutolayoutSamples.debug.xcconfig"; sourceTree = "<group>"; };
 		710B2337D6B0317F046874E6 /* libPods-JKAutolayoutSamples.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JKAutolayoutSamples.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA70A71C2F9E6D9F3721721C /* Pods-JKAutolayoutSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAutolayoutSamples.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKAutolayoutSamples/Pods-JKAutolayoutSamples.release.xcconfig"; sourceTree = "<group>"; };
+		E37EE67C1F8ACB1100061C0D /* AutoadjustingUILabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoadjustingUILabelViewController.h; sourceTree = "<group>"; };
+		E37EE67D1F8ACB1100061C0D /* AutoadjustingUILabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoadjustingUILabelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				3837C1871B7EF89200B59BF1 /* JKAutoResizingCenterViewViewController.m */,
 				38EB57501B7C2CBA00008208 /* JKAllAutolayoutDemos.h */,
 				38EB57511B7C2CBA00008208 /* JKAllAutolayoutDemos.m */,
+				E37EE67C1F8ACB1100061C0D /* AutoadjustingUILabelViewController.h */,
+				E37EE67D1F8ACB1100061C0D /* AutoadjustingUILabelViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,7 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -368,6 +373,7 @@
 				3837C1851B7EDA1200B59BF1 /* UIView+JKAutolayoutEnabled.m in Sources */,
 				38DAEF101B802C6D008A850F /* JKAutolayoutedExpandableView.m in Sources */,
 				380872FC1BC8A25A00007280 /* LandingViewController.m in Sources */,
+				E37EE67E1F8ACB1100061C0D /* AutoadjustingUILabelViewController.m in Sources */,
 				3837C1881B7EF89200B59BF1 /* JKAutoResizingCenterViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JKAutolayoutSamples/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayeshKawli.autolayoutSamples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,7 +520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JKAutolayoutSamples/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayeshKawli.autolayoutSamples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

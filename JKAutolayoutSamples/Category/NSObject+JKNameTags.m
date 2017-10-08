@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+JKNameTags.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 @implementation NSObject (JKNameTags)
 
